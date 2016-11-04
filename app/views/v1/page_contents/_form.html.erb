@@ -1,0 +1,11 @@
+<%= form_tag("/page_contents", method: :post) do |f| %>
+
+  <div class="field">
+    <%= label(:page_content, :source) %>
+    <%= text_field(:page_content, :source) %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag("Parse Page") %>
+  </div>
+<% end %>

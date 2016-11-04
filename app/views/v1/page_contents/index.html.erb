@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<div>
+  <div style="float:left;"><h1>Page Contents</h1></div>
+  <div style="float:right;"><h3><%= link_to "Parse New page", "/parse_page", :style => "color:forestgreen !important;"%></h3></div>
+</div>
+<br/>
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Links</th>
+      <th>H1 Tag Texts</th>
+      <th>H2 Tag Texts</th>
+      <th>H3 Tag Texts</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @page_contents.each do |page_content| %>
+      <tr>
+        <td><%= page_content.source %></td>
+        <td><%= page_content.links %></td>
+        <td><%= page_content.h1_texts %></td>
+        <td><%= page_content.h2_texts %></td>
+        <td><%= page_content.h3_texts %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Page Content', new_page_content_path %>
